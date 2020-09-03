@@ -1,5 +1,5 @@
 jobs:
-  node/test:
+  test:
     executor:
       name: node/default
       tag: '13'
@@ -17,4 +17,4 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - node/test
+      - test
