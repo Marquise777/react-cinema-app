@@ -10,10 +10,9 @@ jobs:
       - run:
           command: yarn run test
           name: Run YARN tests
-
-version: 2.1
 orbs:
   node: circleci/node@4.0.0
+version: 2.1
 workflows:
   node-tests:
     jobs:
