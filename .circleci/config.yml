@@ -1,15 +1,4 @@
-jobs:
-  test:
-    executor:
-      name: node/default
-      tag: '13'
-    steps:
-      - node/install-packages:
-          pkg-manager: yarn
+version: 2.1
 orbs:
   node: circleci/node@4.0.0
-version: 2.1
-workflows:
-  node-tests:
-    jobs:
-      - test
+
