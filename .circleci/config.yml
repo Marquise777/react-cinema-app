@@ -4,12 +4,8 @@ jobs:
       name: node/default
       tag: '13'
     steps:
-      - checkout
       - node/install-packages:
           pkg-manager: yarn
-      - run:
-          command: yarn run test
-          name: Run YARN tests
 orbs:
   node: circleci/node@4.0.0
 version: 2.1
