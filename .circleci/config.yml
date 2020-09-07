@@ -11,14 +11,14 @@ jobs:
           command: echo ${CURRENT_BRANCH}
       - restore_cache: 
           keys:
-            - app-{{checksum package.json}}
+            - app-{{checksum "package.json"}}
             - app-
       - run:
           name: Install yarn
-          command: npm install -g yarn    
+          command: sudo npm install -g yarn    
       - run:
           name: Install dependencies
-          command: yarn install 
+          command: sudo yarn install 
       - save_cache:
           paths: 
             - node_modules
