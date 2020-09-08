@@ -26,7 +26,7 @@ jobs:
       - save_cache:
           paths: 
             - node_modules
-          key: app-{{checksum package.json}}
+          key: app-{{checksum "package.json"}}
   notify-via-slack:
     executor: slack-executor
     steps:
