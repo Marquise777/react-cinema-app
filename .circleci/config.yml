@@ -29,12 +29,12 @@ jobs:
           key: app-{{checksum package.json}}
   notify-via-slack:
     executor: slack-executor
-      steps:
-        - slack/notify:
-            message: "${CIRCLE_BRANCH} branch build is completed"
-            webhook: $SLACK_WEBHOOK
-        - slack/status:
-            webhook: $SLACK_WEBHOOK
+    steps:
+      - slack/notify:
+          message: "${CIRCLE_BRANCH} branch build is completed"
+          webhook: $SLACK_WEBHOOK
+      - slack/status:
+          webhook: $SLACK_WEBHOOK
 workflows:
   build_and_deploy:
     jobs:
