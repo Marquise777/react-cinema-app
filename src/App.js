@@ -4,6 +4,7 @@ import { Provider } from "react-redux"
 import store from "./redux/store"
 
 import { Header } from "./components/header"
+import Main from "./components/main/Main"
 
 import './App.scss';
 
@@ -12,7 +13,7 @@ const App = () => {
     <Provider store={store}>
       <Header />
       <div className="app">
-        <h1>Setup React Redux</h1>
+        <Main />
       </div>
     </Provider>
 
